@@ -40,7 +40,8 @@ def load_bank_data():
 
     return load_csv(csvpath)
 
-
+# function to load applicant information: credit score, monthly debt, income, loan requested,
+#home value
 def get_applicant_info():
     """Prompt dialog to get the applicant's financial information.
 
@@ -62,7 +63,7 @@ def get_applicant_info():
 
     return credit_score, debt, income, loan_amount, home_value
 
-
+# Function to filter qualifying loans according to the get_applicant_info function
 def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_value):
     """Determine which loans the user qualifies for.
 
@@ -103,7 +104,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
-
+# Function to save qualifying loans into a new csv file from find_qualifying_loans filter function
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
@@ -134,6 +135,7 @@ def save_qualifying_loans(qualifying_loans):
     f.close()
 """
 
+# Defining a run function for running the customer script to prompt them for their information
 def run():
     """The main function for running the script."""
 

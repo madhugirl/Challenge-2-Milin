@@ -7,16 +7,16 @@ from qualifier.utils import fileio
 # Import Calculators
 from qualifier.utils import calculators
 
-# Import Filters from filters folder.  These are files in this folder
+# Import Filters from filters folder.  These are files in the filters folder
 # Requesting fucntions from these files in filters folder
 from qualifier.filters import credit_score
 from qualifier.filters import debt_to_income
 from qualifier.filters import loan_to_value
 from qualifier.filters import max_loan_size
 
+# Use Path from pathlib to output the test csv to ./data/output/qualifying_loans.csv
 def test_save_csv(bank_data):
     fileio.save_csv(Path('./data/output/qualifying_loans.csv'), bank_data)
-    # Use Path from pathlib to output the test csv to ./data/output/qualifying_loans.csv
 
 def test_calculate_monthly_debt_ratio():
     assert calculators.calculate_monthly_debt_ratio(1500, 4000) == 0.375

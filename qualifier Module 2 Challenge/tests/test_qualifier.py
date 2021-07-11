@@ -24,6 +24,7 @@ def test_calculate_monthly_debt_ratio():
 def test_calculate_loan_to_value_ratio():
     assert calculators.calculate_loan_to_value_ratio(210000, 250000) == 0.84
 
+#not using debt, income, and home_value in test.csv - test program
 def test_filters():
     bank_data = fileio.load_csv(Path('./data/daily_rate_sheet.csv'))
     current_credit_score = 750

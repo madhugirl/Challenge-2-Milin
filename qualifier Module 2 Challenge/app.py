@@ -153,6 +153,8 @@ def run():
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
 
-
+# special variable to store python namespace, app.py is the main function we are running. 
+# This function defines app.py as the main funtion
+# run function which signals to python that app.py is the main program to run
 if __name__ == "__main__":
     fire.Fire(run)

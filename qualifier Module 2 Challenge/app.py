@@ -121,6 +121,7 @@ def save_qualifying_loans(qualifying_loans):
             fp = questionary.path("Where would you like to save the loans?").ask()
             #fp is shorthand for customer filepath, what the return is
             save_csv(fp, qualifying_loans)
+            print(f"Sucessfully saved Qualifying Loans to csv")
 """
 #Block comment 3 quotes = commenting out code
 # create the csv writer

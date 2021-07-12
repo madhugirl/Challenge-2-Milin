@@ -26,6 +26,7 @@ from qualifier.filters.loan_to_value import filter_loan_to_value
 
 import csv
 
+# Function to ask the client where the want the data pulled from.  daily_rate_sheet.csv
 def load_bank_data():
     """Ask for the file path to the latest banking data and load the CSV file.
 

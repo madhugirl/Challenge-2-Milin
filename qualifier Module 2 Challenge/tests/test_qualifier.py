@@ -37,7 +37,7 @@ def test_filters():
 
     loan_to_value_ratio = 0.84
 
-    # @TODO: Test the new save_csv code!
+  
     #saving the test csv data, and calling each function one by one
     bank_data = credit_score.filter_credit_score(current_credit_score, bank_data)
     bank_data = debt_to_income.filter_debt_to_income(monthly_debt_ratio, bank_data)

@@ -105,14 +105,16 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
-# Function to save qualifying loans into a new csv file from find_qualifying_loans filter function
+# Function to save qualifying loans into a new csv file from find_qualifying_loans filter function.
+# Entering new data into qualifying_loans.csv in data/output folder
+# For test_qualifier.py customer can enter test.csv when prompted to where to send the data for testing from this file
+
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
     f = open('./data/output/qualifying_loans.csv', 'w')
     print(qualifying_loans)
     if len(qualifying_loans) == 0:

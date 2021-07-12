@@ -5,7 +5,13 @@ This contains a helper function for loading and saving CSV files.
 
 """
 import csv
-
+def save_csv(fp, qualifying_loans):
+    with open (fp, "w") as f:
+        writer = csv.writer(f)
+        writer.writerow(["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"])
+        for loan in qualifying_loans:
+            writer.writerow(loan)
+            return
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
@@ -33,10 +39,5 @@ def load_csv(csvpath):
 # w = write file f = object that has all the properties, 
 # shorthand, stores results of open FP command variable
 #return function nothing to return, just want to add return statement so Python is happy
-def save_csv(fp, qualifying_loans):
-    with open (fp, "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"])
-        for loan in qualifying_loans:
-            writer.writerow(loan)
-    return
+
+    

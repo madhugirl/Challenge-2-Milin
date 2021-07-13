@@ -11,7 +11,7 @@ def save_csv(fp, qualifying_loans):
         writer.writerow(["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"])
         for loan in qualifying_loans:
             writer.writerow(loan)
-            return
+        return
 
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
